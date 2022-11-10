@@ -43,7 +43,8 @@ public abstract class DigitalContent implements Comparable<String>{
     }
 
     public boolean match(String query){
-        return this.title.contains(query) || this.publisher.contains(query);
+        return this.title.contains(query) || this.publisher.contains(query)
+                || this.releaseDate.contains(query);
     }
 
     public int compareTo(String title){
